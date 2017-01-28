@@ -9,7 +9,7 @@ class Router
     @goToRoute(route, false)
 
   goToRoute: (route, pushState = true) ->
-    @container.empty()
+    @container.innerHTML = ""
     route = Routes.defaultRoute if Object.keys(Routes.list()).indexOf(route) == -1
     Routes.list()[route]()
 
